@@ -1,0 +1,366 @@
+<h1>Installing and Configuring Jupyter Notebook</h1>
+<br>
+<h2>Installing Python via the Anaconda Framework</h2>
+
+In this course, we will be utilizing Anaconda, a popular, high performance tool that helps us manage Python as well as a number of useful data science tools. It is inevitable that some students will experience issues with the following download/installation steps. If you experience any issues, make sure to attend the relevant office hours.
+
+
+
+
+<h2>Step 0 - Before Getting Started</h2>
+
+If using a work computer, make sure you have the ability to download/install software.
+
+
+
+
+<h2>Step 1 - Installing Anaconda</h2>
+
+Install the most recent Anaconda Distribution for Python 3 via one of the following links:
+
+
+
+
+<h4>Mac:</h4>
+
+https://www.anaconda.com/download/#macos<br>
+
+<h4>Windows/PC:</h4>
+
+https://www.anaconda.com/download/#windows
+<br><br>
+<h2>Downloading Anaconda</h2>
+<br>
+<h3>Step 1a - Click Download on the Anaconda website</h3>
+
+
+
+
+ 
+
+
+
+
+
+
+
+<h3>Step 1b (Windows OS) - Make sure both Advanced Options boxes are checked before clicking install. Also, please install for All Users if given the option.</h3>
+
+
+
+
+  
+
+
+
+
+
+
+
+<h3>Step 1b (Mac OS) - No need to Install PyCharm</h3>
+
+The installation wizard may prompt you to install PyCharm. There is no need to do this for our course as we will not be using it.
+
+
+
+
+
+
+
+<h2>Step 2 - Installing/Configuring Jupyter Notebook</h2>
+
+<h3>Step 2a - Opening Terminal/Anaconda PowerShell</h3>
+
+Anaconda Navigator is now installed on your system. This is a visual interface containing a number of useful coding tools. However, we will NOT be using this interface as it is very resource heavy (it tends to be very slow). Instead, we will be using Terminal or Anaconda PowerShell Prompt as these tools talk directly to the backend of your computer.
+
+
+
+
+<h4>Mac Users: Opening Terminal</h4>
+Press Command + Spacebar to open Spotlight Search
+Input Terminal in the search bar and press < Enter >
+Proceed to the next step
+<br><br>
+
+<h4>Windows Users: Opening Anaconda PowerShell</h4>
+Search Anaconda PowerShell in the Windows Search bar
+Right-Click the Anaconda PowerShell icon
+Select Run as Administrator
+If a screen pops up asking if you are sure you want to do this, select Yes
+Proceed to the next step
+
+
+
+<h3>Step 2b - Installing Jupyter Notebook</h3>
+
+The following code will install Jupyter Notebook. If the first code does not work, please try the second code. Also note that if you have already launched Jupyter Notebook, the screen you see for Terminal/Anaconda PowerShell will show a number of log files and will be busy (it will not let you run any code). If this is the case, close this window, as well as any Anaconda programs (including Anaconda Navigator) and open Terminal/Anaconda PowerShell Prompt one more time (it should be (mostly) blank).
+<br><br>
+Note: Your screen may pause for a few seconds after following the directions below.
+
+
+
+
+Copy/paste the following into Terminal/Anaconda PowerShell and press Enter:
+
+______________________________________________________________________
+
+conda install jupyter notebook
+
+______________________________________________________________________
+
+
+
+
+If that didn't work, try copy/pasting this and press Enter:
+
+______________________________________________________________________
+
+pip install notebook
+
+______________________________________________________________________
+
+
+
+<h3>Step 2c - Press y and < Enter > to proceed</h3>
+
+Your computer will think for awhile before asking:
+
+        Proceed? [y] / n
+
+
+
+
+When this happens,
+
+        Press y and then hit < Enter >
+
+
+
+
+
+
+
+
+
+
+<h3>Step 2d - Installing Extension Files</h3>
+In this step, we are going to install some very useful add ons (known more formally as extensions) for Jupyter Notebook. These extensions are required in order for our interactive textbook to function properly. Below are two methods for installing notebook extensions. If the first one does not work, try the second one. If you're still having trouble, make sure to attend technical support hours.
+<br><br>
+Note: Your screen may pause for a few seconds after following the directions below.
+
+
+
+
+Try copy/pasting this into Terminal/Anaconda PowerShell and press Enter:
+
+______________________________________________________________________
+
+conda install -c conda-forge jupyter_contrib_nbextensions
+
+______________________________________________________________________
+
+
+
+
+
+
+
+If that didn't work, try copy/pasting this:
+
+______________________________________________________________________
+
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+
+______________________________________________________________________
+
+
+
+
+
+
+
+<h3>Step 2e - Press y and < Enter > to proceed</h3>
+
+Your computer will think for some time before asking:
+
+        Proceed? [y] / n
+
+
+
+
+When this happens,
+
+        Press y and then hit < Enter >
+
+
+
+
+
+
+
+<h3>Step 2f - Installing Jupyter Notebook Extensions</h3>
+Copy/paste this into Terminal/Anaconda PowerShell and press Enter:
+
+______________________________________________________________________
+
+jupyter contrib nbextension install --user
+
+______________________________________________________________________
+
+
+
+
+
+
+
+<h3>Step 2g - Enabling Jupyter Notebook Extensions</h3>
+Now that Jupyter Notebook Extensions have been installed, copy/paste the following into Terminal/PowerShell and press < Enter >. This enables the extensions we need to use the textbook and in-class coding scripts.
+
+Note: Depending on your system, you may have to the following one line at a time.
+
+______________________________________________________________________
+
+jupyter nbextension enable exercise2/main
+jupyter nbextension enable ruler/main
+jupyter nbextension enable scroll_down/main
+jupyter nbextension enable toc2/main
+jupyter nbextension enable varInspector/main
+jupyter nbextension enable codefolding/main
+jupyter nbextension enable highlighter/highlighter
+jupyter nbextension enable contrib_nbextensions_help_item/main
+jupyter nbextension enable spellchecker/main
+jupyter nbextension enable splitcell/splitcell
+
+jupyter nbextension enable freeze/main
+
+jupyter nbextension enable scratchpad/main
+
+______________________________________________________________________
+
+
+
+
+Make sure you press < Enter > a few times after running the last line of code.  On some systems, Terminal/Anaconda PowerShell won't automatically run the last line of code.
+
+
+
+
+
+
+
+<h3>Step 3 - Making Sure Everything is Up to Date</h3>
+Input the following in Terminal/Anaconda PowerShell:
+
+______________________________________________________________________
+
+conda install pandas
+
+______________________________________________________________________
+
+
+
+
+
+
+
+Then run the following:
+
+______________________________________________________________________
+
+conda update conda
+
+______________________________________________________________________
+
+
+
+
+Anaconda will reconfigure a number of your packages to make sure there are no issues.
+
+
+
+
+
+
+
+<h2>Step 4 - Opening Jupyter Notebook</h>
+How to Use Jupyter Notebook
+
+Jupyter Notebook is a browser-based tool. Therefore, opening Notebook files (which have the extension .ipynb) can only be done from the window that opens in your web browser (double-clicking on a Notebook file will not work).
+
+
+
+
+
+
+
+<h3>Step 4a - Opening Jupyter Notebook</h3>
+
+If you are on Windows, close your Anaconda PowerShell window. Open this again, but NOT in administrator mode. If you are on Mac, you may continue in the Terminal window that is currently open.
+
+Type jupyter notebook in Terminal/Anaconda PowerShell and press < Enter >. You should now be on a  screen that shows your root directory, which is the place where your computer stores all of the folders you normally access (Desktop, Documents, etc.). It should look something like this:
+
+
+
+
+ 
+
+  
+
+
+
+
+If the above Nbextensions tab does not show up, keep reading this tutorial until you have test_notebook.ipynb open. Then, go to Edit > nbextensions config to access the menu. If this menu is also not appearing, please attend technical office hours for support.
+
+
+
+
+ 
+
+  
+
+<h3>Step 4b - Enabling Notebook Extensions</h3>
+Click on the Nbextensions tab and make sure the following are checked. Also, make sure the checkbox in the upper left corner under Configurable nbextensions is not checked. Note that the extension highlighted in yellow is not needed for our course and may not show up in your checklist (it has been discontinued).
+
+
+
+
+ 
+
+
+
+
+  
+
+<h3>Step 4c - Download and open test_notebook.ipynb from the course page</h3>
+Remember, you will need to use Jupyter Notebook in your web browser to open this file. Navigate from your root directory to where test_notebook.ipynb is located (i.e., the Downloads folder).
+
+This chapter is available under Modules > Textbooks, Learning Materials, and Software. Make sure to open it from the Jupyter Notebook window in your web browser.
+
+
+
+
+The buttons (i.e., the extensions you just installed) at the top of your Notebook should appear as follows:
+
+
+
+
+
+
+
+
+
+
+Below is a sample as to what test_notebook.ipynb should look like:
+
+
+
+
+
+
+
+
+
+
+---- If you get stuck in any of these steps ----
+
+Please attend technical office hours for support.
